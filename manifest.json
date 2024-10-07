@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Medilink Helper",
+  "version": "1.4",
+  "description": "Extensión para ayudar con Medilink.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtzvI9WXRKpqeavtxUHYQaLloabkju3MSyuHvLMMU4QAEcIS+tZ+CVODasaIUhCliBcQeyh3DPguR1JhwucvTLZlMfn0GLvBTktuZNqQRlO1RJTj8Qvd0UUZA1pa6dORcN4P86ZL5DAngG9PAPb2zYxd60wnz45S71ihl6g19ZfY1nAqV7BD7OGGalKIdk+P96C459d+tppsBK8xyTLfJVn1Fcu0HAxQEGzYECvwTnx6wMZ5NByoFWVj+aE9xcNTRfkmEtka+afuCT7RzXUg2KrtsD1Ra057jpznMaEf3RzT7BoyPuPdg1CCrM1J14ajvwingTJkDX5dkjdJwHB/7awIDAQAB",
+  "permissions": [
+    "cookies",
+    "activeTab",
+    "scripting",
+    "storage",
+    "identity",
+    "identity.email",
+    "notifications",
+    "downloads"
+  ],
+  "oauth2": {
+    "client_id": "960359169235-002fmbjoch0kjg1jecfr852uajj1j04i.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/spreadsheets.readonly"
+    ]
+  },
+  "host_permissions": [
+    "https://saludfeet.app.softwaremedilink.com/*",
+    "https://www.googleapis.com/*",
+    "https://docs.google.com/*"
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/16x16.png",
+      "32": "images/32x32.png",
+      "128": "images/128x128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/contentScript.js"]
+    }
+  ]
+}

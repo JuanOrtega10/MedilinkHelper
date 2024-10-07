@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Medilink Helper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Medilink Helper</h1>
+    </header>
+
+    <section class="actions">
+      <button id="uploadAllPatients">
+        <span class="icon">⬆️</span>
+        Subir Todos los Pacientes
+      </button>
+      <button id="uploadLast7Days">
+        <span class="icon">📅</span>
+        Subir Pacientes Últimos 7 Días
+      </button>
+      <button id="uploadLast30Days">
+        <span class="icon">🗓️</span>
+        Subir Pacientes Últimos 30 Días
+      </button>
+    </section>
+
+    <!-- Contenedor para las notificaciones -->
+    <div id="notificationContainer"></div>
+
+    <footer>
+      <p>&copy; 2023 SaludFeet</p>
+    </footer>
+  </div>
+
+  <!-- Incluimos los scripts al final del body -->
+  <script src="js/processor.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/popup.js"></script>
+</body>
+</html>
